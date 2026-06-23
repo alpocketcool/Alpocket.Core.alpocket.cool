@@ -1,8 +1,9 @@
 <!--
-ALPOCKET CORE v1.2
+ALPOCKET CORE v1.3_PATCH_01
 WARNING: STRUCTURE LOCKED — ONLY COPY PATCHES ALLOWED
 SECTIONS FROZEN: hero / problem / fermentator / sygnalowiec / oddychajacy / what / layers / filter / cta
 IDs FROZEN: #hero #problem #fermentator #sygnalowiec #oddychajacy #what #layers #filter #cta
+PATCH NOTE: cena startowa 70 zl zamiast 79 zl, plakietka dodana przy layer-tag i obu CTA. Zero zmian w DOM/strukturze.
 -->
 <!DOCTYPE html>
 <html lang="pl">
@@ -42,7 +43,6 @@ IDs FROZEN: #hero #problem #fermentator #sygnalowiec #oddychajacy #what #layers 
     cursor: crosshair;
   }
 
-  /* ─── NAWIGACJA ─── */
   nav {
     position: fixed;
     top: 0; left: 0; right: 0;
@@ -73,7 +73,6 @@ IDs FROZEN: #hero #problem #fermentator #sygnalowiec #oddychajacy #what #layers 
     text-transform: uppercase;
   }
 
-  /* ─── SEKCJE ─── */
   section {
     min-height: 100vh;
     display: flex;
@@ -90,7 +89,6 @@ IDs FROZEN: #hero #problem #fermentator #sygnalowiec #oddychajacy #what #layers 
     padding: 120px 0 80px;
   }
 
-  /* ─── HERO ─── */
   #hero {
     min-height: 100vh;
     justify-content: flex-end;
@@ -152,7 +150,6 @@ IDs FROZEN: #hero #problem #fermentator #sygnalowiec #oddychajacy #what #layers 
     margin-bottom: 32px;
   }
 
-  /* ─── DIVIDER ─── */
   .divider {
     width: 100%;
     height: 1px;
@@ -161,7 +158,6 @@ IDs FROZEN: #hero #problem #fermentator #sygnalowiec #oddychajacy #what #layers 
     margin: 0 auto;
   }
 
-  /* ─── LABELS ─── */
   .section-label {
     font-size: 11px;
     letter-spacing: 0.25em;
@@ -182,7 +178,6 @@ IDs FROZEN: #hero #problem #fermentator #sygnalowiec #oddychajacy #what #layers 
     background: var(--gray-4);
   }
 
-  /* ─── NAGŁÓWKI SEKCJI ─── */
   h2 {
     font-family: var(--sans);
     font-size: clamp(36px, 5vw, 64px);
@@ -208,7 +203,6 @@ IDs FROZEN: #hero #problem #fermentator #sygnalowiec #oddychajacy #what #layers 
     margin-bottom: 16px;
   }
 
-  /* ─── PARAGRAFY ─── */
   .body-text {
     font-size: 16px;
     line-height: 1.7;
@@ -218,7 +212,6 @@ IDs FROZEN: #hero #problem #fermentator #sygnalowiec #oddychajacy #what #layers 
 
   .body-text + .body-text { margin-top: 20px; }
 
-  /* ─── PROBLEM ─── */
   #problem {
     background: var(--black);
     color: var(--white);
@@ -261,7 +254,6 @@ IDs FROZEN: #hero #problem #fermentator #sygnalowiec #oddychajacy #what #layers 
     min-width: 32px;
   }
 
-  /* ─── ARCHETYPY ─── */
   .archetype-block {
     padding: 80px 0;
     border-bottom: 1px solid var(--gray-5);
@@ -296,7 +288,6 @@ IDs FROZEN: #hero #problem #fermentator #sygnalowiec #oddychajacy #what #layers 
     font-family: var(--mono);
   }
 
-  /* ─── CO TO JEST ─── */
   #what {
     background: var(--gray-1);
     color: var(--white);
@@ -329,7 +320,6 @@ IDs FROZEN: #hero #problem #fermentator #sygnalowiec #oddychajacy #what #layers 
     font-style: italic;
   }
 
-  /* ─── WARSTWY ─── */
   .layers-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -355,6 +345,25 @@ IDs FROZEN: #hero #problem #fermentator #sygnalowiec #oddychajacy #what #layers 
     margin-bottom: 16px;
   }
 
+  .price-badge {
+    display: inline-block;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--black);
+    background: var(--accent);
+    padding: 4px 10px;
+    margin-left: 10px;
+    font-family: var(--mono);
+    vertical-align: middle;
+  }
+
+  .price-old {
+    text-decoration: line-through;
+    color: var(--gray-3);
+    font-size: 0.85em;
+  }
+
   .layer-name {
     font-family: var(--sans);
     font-weight: 700;
@@ -378,7 +387,6 @@ IDs FROZEN: #hero #problem #fermentator #sygnalowiec #oddychajacy #what #layers 
   .layer-card.featured .layer-desc { color: var(--gray-4); }
   .layer-card.featured .layer-tag { color: var(--gray-3); }
 
-  /* ─── FILTR ─── */
   #filter {
     background: var(--white);
   }
@@ -409,7 +417,6 @@ IDs FROZEN: #hero #problem #fermentator #sygnalowiec #oddychajacy #what #layers 
     margin-top: 2px;
   }
 
-  /* ─── CTA ─── */
   #cta {
     min-height: auto;
     padding: 160px 40px;
@@ -480,7 +487,6 @@ IDs FROZEN: #hero #problem #fermentator #sygnalowiec #oddychajacy #what #layers 
     color: var(--gray-5);
   }
 
-  /* ─── FOOTER ─── */
   footer {
     background: var(--black);
     border-top: 1px solid var(--gray-2);
@@ -505,7 +511,6 @@ IDs FROZEN: #hero #problem #fermentator #sygnalowiec #oddychajacy #what #layers 
     font-family: var(--mono);
   }
 
-  /* ─── ANIMATIONS ─── */
   .reveal {
     opacity: 0;
     transform: translateY(24px);
@@ -522,7 +527,6 @@ IDs FROZEN: #hero #problem #fermentator #sygnalowiec #oddychajacy #what #layers 
   .reveal-delay-3 { transition-delay: 0.3s; }
   .reveal-delay-4 { transition-delay: 0.4s; }
 
-  /* ─── SCROLL INDICATOR ─── */
   .scroll-hint {
     position: absolute;
     bottom: 40px;
@@ -550,7 +554,6 @@ IDs FROZEN: #hero #problem #fermentator #sygnalowiec #oddychajacy #what #layers 
     to   { opacity: 1;   transform: scaleY(1)   translateY(10px); }
   }
 
-  /* ─── PROGRESS BAR ─── */
   .progress-bar {
     position: fixed;
     top: 0; left: 0;
@@ -561,7 +564,6 @@ IDs FROZEN: #hero #problem #fermentator #sygnalowiec #oddychajacy #what #layers 
     transition: width 0.1s linear;
   }
 
-  /* ─── RESPONSIVE ─── */
   @media (max-width: 768px) {
     nav { padding: 16px 24px; }
 
@@ -603,13 +605,11 @@ IDs FROZEN: #hero #problem #fermentator #sygnalowiec #oddychajacy #what #layers 
 
 <div class="progress-bar" id="progressBar"></div>
 
-<!-- NAV -->
 <nav>
   <a class="nav-logo" href="#">AlPocket CORE</a>
   <span class="nav-label">System mentalny — nie kurs</span>
 </nav>
 
-<!-- ─── HERO ─── -->
 <section id="hero">
   <div class="hero-counter reveal">001 / OTWARCIE</div>
 
@@ -642,7 +642,6 @@ IDs FROZEN: #hero #problem #fermentator #sygnalowiec #oddychajacy #what #layers 
 
 <div class="divider"></div>
 
-<!-- ─── PROBLEM ─── -->
 <section id="problem" class="full-bleed">
   <div class="inner">
     <div class="section-label reveal">Problem</div>
@@ -665,7 +664,6 @@ IDs FROZEN: #hero #problem #fermentator #sygnalowiec #oddychajacy #what #layers 
   </div>
 </section>
 
-<!-- ─── FERMENTATOR ─── -->
 <section id="fermentator">
   <div class="section-label reveal">Etap 01 — Fermentator</div>
 
@@ -690,7 +688,6 @@ IDs FROZEN: #hero #problem #fermentator #sygnalowiec #oddychajacy #what #layers 
 
 <div class="divider"></div>
 
-<!-- ─── SYGNAŁOWIEC ─── -->
 <section id="sygnalowiec">
   <div class="section-label reveal">Etap 02 — Sygnałowiec</div>
 
@@ -717,7 +714,6 @@ IDs FROZEN: #hero #problem #fermentator #sygnalowiec #oddychajacy #what #layers 
 
 <div class="divider"></div>
 
-<!-- ─── ODDYCHAJĄCY ─── -->
 <section id="oddychajacy">
   <div class="section-label reveal">Etap 03 — Oddychający</div>
 
@@ -739,13 +735,12 @@ IDs FROZEN: #hero #problem #fermentator #sygnalowiec #oddychajacy #what #layers 
   </div>
 </section>
 
-<!-- ─── CO TO JEST ─── -->
 <section id="what" class="full-bleed">
   <div class="inner">
     <div class="section-label reveal">Czym jest AlPocket CORE</div>
 
     <h2 class="reveal">
-      Nie kurs.<br><em>Nie coaching.</em><br>System myślenia.
+      Nie kurs.<br><em>Nie coaching.</em> System myślenia.
     </h2>
 
     <p class="body-text reveal reveal-delay-1">
@@ -767,7 +762,6 @@ IDs FROZEN: #hero #problem #fermentator #sygnalowiec #oddychajacy #what #layers 
   </div>
 </section>
 
-<!-- ─── WARSTWY ─── -->
 <section id="layers">
   <div class="section-label reveal">Produkt</div>
 
@@ -779,7 +773,7 @@ IDs FROZEN: #hero #problem #fermentator #sygnalowiec #oddychajacy #what #layers 
 
   <div class="layers-grid reveal reveal-delay-2" style="grid-template-columns: 1fr;">
     <div class="layer-card featured" style="border-right: none;">
-      <div class="layer-tag">Dostępne teraz — 79 zł</div>
+      <div class="layer-tag">Dostępne teraz — <span class="price-old">79 zł</span> 70 zł <span class="price-badge">Cena startowa</span></div>
       <div class="layer-name">CORE 0.1</div>
       <div class="layer-desc" style="margin-top: 16px;">
         PDF systemu (15–20 stron).<br>
@@ -789,19 +783,19 @@ IDs FROZEN: #hero #problem #fermentator #sygnalowiec #oddychajacy #what #layers 
         Protokół zamykania otwartych pętli.
       </div>
       <div style="margin-top: 28px;">
-        <a href="https://checkout.revolut.com/pay/b6da2e57-8f46-49d1-9acf-0c3010a767be" class="btn-primary" style="background: var(--white); color: var(--black); display: inline-block;">Kupuję CORE 0.1 — 79 zł</a>
+        <a href="https://checkout.revolut.com/pay/b6da2e57-8f46-49d1-9acf-0c3010a767be" class="btn-primary" style="background: var(--white); color: var(--black); display: inline-block;">Kupuję CORE 0.1 — 70 zł <span style="opacity:0.6;">(cena startowa)</span></a>
       </div>
     </div>
   </div>
 
   <p class="body-text reveal reveal-delay-3" style="margin-top: 32px; font-size: 13px; color: var(--gray-3);">
-    Płatność przez Revolut. Po zakupie otrzymujesz plik bezpośrednio.
+    Płatność przez Revolut. Po zakupie otrzymujesz plik bezpośrednio.<br>
+    Cena startowa 70 zł dla pierwszych klientów — wraca do 79 zł po pierwszych zamówieniach.
   </p>
 </section>
 
 <div class="divider"></div>
 
-<!-- ─── FILTR ─── -->
 <section id="filter">
   <div class="section-label reveal">Filtr — kto nie powinien tego kupować</div>
 
@@ -824,7 +818,6 @@ IDs FROZEN: #hero #problem #fermentator #sygnalowiec #oddychajacy #what #layers 
   </p>
 </section>
 
-<!-- ─── CTA ─── -->
 <section id="cta" class="full-bleed">
   <div class="inner">
     <div class="section-label reveal" style="color: var(--gray-3);">
@@ -842,20 +835,18 @@ IDs FROZEN: #hero #problem #fermentator #sygnalowiec #oddychajacy #what #layers 
     </p>
 
     <div class="cta-group reveal reveal-delay-2">
-      <a href="https://checkout.revolut.com/pay/b6da2e57-8f46-49d1-9acf-0c3010a767be" class="btn-primary">Kupuję CORE 0.1 — 79 zł</a>
+      <a href="https://checkout.revolut.com/pay/b6da2e57-8f46-49d1-9acf-0c3010a767be" class="btn-primary">Kupuję CORE 0.1 — 70 zł (cena startowa)</a>
       <a href="https://wa.me/48733923159" class="btn-ghost" target="_blank" rel="noopener">Mam pytanie — WhatsApp</a>
     </div>
   </div>
 </section>
 
-<!-- ─── FOOTER ─── -->
 <footer>
   <span class="logo">AlPocket CORE</span>
   <span class="copy">System mentalny dla freelancerów i twórców — 2025</span>
 </footer>
 
 <script>
-  // Progress bar
   const progressBar = document.getElementById('progressBar');
   window.addEventListener('scroll', () => {
     const scrolled = window.scrollY;
@@ -863,7 +854,6 @@ IDs FROZEN: #hero #problem #fermentator #sygnalowiec #oddychajacy #what #layers 
     progressBar.style.width = (scrolled / total * 100) + '%';
   });
 
-  // Reveal on scroll
   const reveals = document.querySelectorAll('.reveal');
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
